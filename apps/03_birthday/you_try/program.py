@@ -8,9 +8,9 @@ def print_header():
 
 def get_birthday_from_user():
     print("When were you born? ")
-    year = input("Year [YYYY]: ")
-    month = input("Month [MM]: ")
-    day = input("Day [DD]: ")
+    year = int(input("Year [YYYY]: "))
+    month = int(input("Month [MM]: "))
+    day = int(input("Day [DD]: "))
 
     bday = datetime.date(year, month, day)
     return bday
@@ -27,6 +27,7 @@ def print_birthday_information():
 def main():
     print_header()
     bday = get_birthday_from_user()
+    print(bday)
     now = None
     number_of_days = compute_days_between_dates(bday, now)
     print_birthday_information(number_of_days)
