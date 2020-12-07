@@ -19,13 +19,20 @@ def run_event_loop():
         cmd = cmd.lower().strip()
 
         if cmd == 'l':
-            print("L")
+            list_entries()
         elif cmd == "a":
-            print("A")
+            add_entry()
         elif cmd != 'x':
             print("Sorry, I don't understand '{}'".format(cmd))
 
     print("Done, goodbye!")
 
+
+def list_entries():
+    print('Listing... ')
+
+
+def add_entry():
+    print('Adding... ')
 
 main()
